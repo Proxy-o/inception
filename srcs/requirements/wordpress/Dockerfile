@@ -11,7 +11,6 @@ RUN apk update && apk upgrade && apk add --no-cache \
     php81-dom \
     php81-exif \
     php81-zip \
-    php81-redis \
     php81-mysqli \
     php81-json \
     php81-curl \

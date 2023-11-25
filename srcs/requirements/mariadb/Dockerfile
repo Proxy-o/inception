@@ -13,9 +13,10 @@ RUN mkdir /var/run/mysqld; \
 
 COPY requirements/mariadb/conf/docker.cnf /etc/my.cnf.d/docker.cnf
 
+COPY requirements/mariadb/conf/create_db.sql.template /tmp/create_db.sql.template
+
 COPY requirements/mariadb/conf/create_db.sh .
 
-COPY requirements/mariadb/conf/create_db.sql.template /tmp/create_db.sql.template
 
 RUN mysql_install_db --user=mysql --datadir=/var/lib/mysql
 

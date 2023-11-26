@@ -39,9 +39,9 @@ services:
       context: .
       dockerfile: requirements/wordpress/Dockerfile
     environment:
-        DB_NAME: ${DB_NAME}
-        DB_USER: ${DB_USER}
-        DB_PASS: ${DB_PASS}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
     container_name: wordpress
     depends_on:
       - mariadb

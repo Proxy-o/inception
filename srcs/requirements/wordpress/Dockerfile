@@ -30,7 +30,6 @@ RUN wget https://wordpress.org/latest.zip && \
 RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \ 
     && chmod +x wp-cli.phar && mv wp-cli.phar /usr/local/bin/wp
 
-COPY ./requirements/wordpress/conf/wp-config-template.php .
 COPY ./requirements/wordpress/conf/wp-config.sh .
 
 CMD sh -c 'sleep 10 && sh /var/www/wp-config.sh  && /usr/sbin/php-fpm81 -F'

@@ -32,4 +32,6 @@ RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.ph
 
 COPY ./requirements/wordpress/conf/wp-config.sh .
 
-CMD sh -c 'sleep 10 && sh /var/www/wp-config.sh  && /usr/sbin/php-fpm81 -F'
+
+CMD ["sh", "-c", "sleep 10 && sh /var/www/wp-config.sh && /usr/sbin/php-fpm81 -F"]
+

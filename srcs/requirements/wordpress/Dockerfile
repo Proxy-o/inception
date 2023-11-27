@@ -17,8 +17,7 @@ RUN apk update && apk upgrade && apk add --no-cache \
     php81-phar \
     wget \
     mariadb-client \
-    unzip && \
-    rm -f /var/cache/apk/*
+    unzip && 
 
 COPY ./requirements/wordpress/conf/www.conf /etc/php81/php-fpm.d/www.conf
 
@@ -32,6 +31,7 @@ RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.ph
 
 COPY ./requirements/wordpress/conf/wp-config.sh .
 
+EXPOSE 9000
 
 CMD ["sh", "-c", "sleep 10 && sh /var/www/wp-config.sh && /usr/sbin/php-fpm81 -F"]
 

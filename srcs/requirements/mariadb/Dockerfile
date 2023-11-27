@@ -1,7 +1,7 @@
 FROM public.ecr.aws/docker/library/alpine:3.17.5
 
 ARG DB_NAME \
-    DN_ROOT \
+    DB_ROOT \
     DB_USER \
     DB_PASS  
 
@@ -20,9 +20,10 @@ COPY requirements/mariadb/conf/create_db.sh .
 
 RUN mysql_install_db --user=mysql --datadir=/var/lib/mysql
 
-EXPOSE 3306
 
 RUN sh create_db.sh && rm create_db.sh
 
 USER mysql
+
+EXPOSE 3306
 CMD ["/usr/bin/mysqld", "--skip-log-error"]

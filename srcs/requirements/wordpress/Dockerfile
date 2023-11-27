@@ -17,7 +17,7 @@ RUN apk update && apk upgrade && apk add --no-cache \
     php81-phar \
     wget \
     mariadb-client \
-    unzip && 
+    unzip 
 
 COPY ./requirements/wordpress/conf/www.conf /etc/php81/php-fpm.d/www.conf
 

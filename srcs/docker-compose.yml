@@ -42,6 +42,11 @@ services:
       DB_NAME: ${DB_NAME}
       DB_USER: ${DB_USER}
       DB_PASS: ${DB_PASS}
+      WP_ADMIN: ${WP_ADMIN}
+      WP_PASS: ${WP_PASS}
+      WP_EMAIL: ${WP_EMAIL}
+      WP_USER_PASS: ${WP_USER_PASS}
+
     container_name: wordpress
     depends_on:
       - mariadb

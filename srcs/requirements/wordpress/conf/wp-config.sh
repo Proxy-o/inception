@@ -8,8 +8,8 @@ wp config create	--allow-root \
 	--dbpass=$DB_PASS \
 	--dbhost=mariadb:3306 
 
-wp core install --url=otait-ta.42.fr --title=otait-ta-Blog --admin_user=othmane --admin_password=1960 --admin_email=othmane@gmail.com
-wp user create auth_user auth@example.com --role=author --user_pass=auth_pass
+wp core install --url=otait-ta.42.fr --title=otait-ta-Blog --admin_user=$WP_ADMIN --admin_password=$WP_PASS --admin_email=$WP_EMAIL
+wp user create auth_user auth@example.com --role=author --user_pass=$WP_USER_PASS
 
 
 fi

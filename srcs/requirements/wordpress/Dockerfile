@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/alpine:3.17.5
+FROM alpine:3.17
 
 
 RUN apk update && apk upgrade && apk add --no-cache \

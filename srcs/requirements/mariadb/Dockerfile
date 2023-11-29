@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/alpine:3.17.5
+FROM alpine:3.17
 
 ARG DB_NAME \
     DB_ROOT \
